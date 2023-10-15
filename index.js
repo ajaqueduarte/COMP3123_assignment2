@@ -1,7 +1,8 @@
-var express = require('express')
-const SERVER_PORT = 8089
-var app = express()
+var express = require('express');
+var app = express();
 app.use(express.json());
+
+const PORT = process.env.PORT || 8089;
 
 const mongoose = require('mongoose');
 
@@ -208,6 +209,6 @@ app.delete('/api/v1/emp/employees/:eid', async (req, res) => {
 
 
 
-app.listen(SERVER_PORT, ()=>{
-  console.log(`Server running at http://localhost:${SERVER_PORT}/`)
-})
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
