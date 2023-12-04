@@ -1,0 +1,28 @@
+/* AddEmployee.css */
+.add-employee-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .add-employee-form input,
+  .add-employee-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .add-employee-form button {
+    background-color: #5cb85c; /* Green */
+    color: white;
+    cursor: pointer;
+  }
+  
+  .add-employee-form button:hover {
+    background-color: #4cae4c; /* Darker green */
+  }
+  

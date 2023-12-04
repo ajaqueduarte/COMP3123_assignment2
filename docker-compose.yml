@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .  # Current directory, assuming this is where your Node.js app's Dockerfile is
+    ports:
+      - '8089:8089'
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/comp3123_assigment1
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: ./my-react-app  # Path to your React app's directory
+    ports:
+      - '80:80'
+    depends_on:
+      - backend
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:
